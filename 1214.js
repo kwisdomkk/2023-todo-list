@@ -2,7 +2,7 @@ const toDoForm=document.querySelector('#todo-form')
 const toDoInput=document.querySelector('#todo-form input')
 const toDoList=document.querySelector('#todo-list')
 
-let toDos=[]
+let toDos=[ ]
 
 function saveToDos(){
     // console.log(toDos)
@@ -11,17 +11,20 @@ function saveToDos(){
 
 function deleteToDo(e){
     const li=e.target.parentElement
-    li.remove()
+    li.remove();
+    toDos=toDos.filter((item)=>item.id !==parseInt(li.id))
+    saveToDos()
 }
 
 function paintToDo(newTodo) {
     const li=document.createElement('li');
+    li.setAttribute("id",newTodo.id)
     const span=document.createElement('span');
     const button=document.createElement('button');
     
     button.innerText="❌"
     button.addEventListener('click',deleteToDo)
-    span.innerText=newTodo;
+    span.innerText=newTodo.text;
     li.appendChild(span)
     li.appendChild(button)
     toDoList.appendChild(li)
@@ -31,12 +34,15 @@ function paintToDo(newTodo) {
 function handleToDoSubmit (event) {
     event.preventDefault();            //submit의 기본동작(새로고침)을 실행하지 않도록 지정
     // console.log(toDoInput.value)
-    const newTodo=toDoInput.value
+    const newTodoObj={
+        text: toDoInput.value,
+        id: Date.now()
+    }
     toDoInput.value="";
     // 그려주는 함수
-    paintToDo(newTodo)
+    paintToDo(newTodoObj)
     //로컬스토리지에 저장하는 함수
-    toDos.push(newTodo)
+    toDos.push(newTodoObj)
     saveToDos();
 }
 
