@@ -42,8 +42,8 @@ function handleToDoSubmit (event) {
     // 그려주는 함수
     paintToDo(newTodoObj)
     //로컬스토리지에 저장하는 함수
-    toDos.push(newTodoObj)
-    saveToDos();
+    // toDos.push(newTodoObj)
+    // saveToDos();
 }
 
 toDoForm.addEventListener('submit',handleToDoSubmit)    //(event,event가 발생했을 때 실행될 함수)  
