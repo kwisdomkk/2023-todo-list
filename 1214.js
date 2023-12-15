@@ -52,7 +52,7 @@ const savedToDos=localStorage.getItem('todos') //getItem('key') 키로 부터 �
 
 if(savedToDos !==null){
     const parsedToDos=JSON.parse(savedToDos)
-    toDos=parsedToDos
+    toDos=parsedToDosgit
     toDos.forEach(paintToDo)
 }
 
