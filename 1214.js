@@ -10,7 +10,7 @@ function saveToDos(){
 }
 
 function deleteToDo(e){
-    const li=e.target.parentElement
+    const li=e.target.parentElement 
     li.remove();
     toDos=toDos.filter((item)=>item.id !==parseInt(li.id))
     saveToDos()
@@ -19,6 +19,7 @@ function deleteToDo(e){
 function paintToDo(newTodo) {
     const li=document.createElement('li');
     li.setAttribute("id",newTodo.id)
+    li.setAttribute("draggable","true")
     const span=document.createElement('span');
     const button=document.createElement('button');
     

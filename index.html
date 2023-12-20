@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>To Do List</title>
-    <style>
-        form{
-            width: 500px;
-            margin: 0 auto;
-            padding: 40px;
-            position: relative;
-            top: 110px; left: -50px;   
-        }
-        input{
-            width: 100%;
-            padding: 10px 10px;
-            position: absolute;
-        }
-        ul{gap: 10px; width: 500px;
-            margin: 0 auto;
-            position:relative;top:160px;left: -50px;
-        }
-        li{ list-style: none;
-            padding: 10px;
-            font-size:small;font-weight: bold;
-        }
-        button{
-            margin: 0 10px;
-        }
-        div{text-align: center;font-size: 70px;margin-top: 50px;background-color:#FFD9FA}
-        body{background-color:#FFEBFF;}
-    </style>
-    
+
+
 </head>
+
 <body>
-    <div>To Do List</div>
-    <form id="todo-form">
-        <input type="text" placeholder="할 일을 입력해 주세요"/>
-    </form>
-    <!--투두 리스트 나열하는 부분-->
-    <!--자바스크립트에서 li 생성-->
-    <ul id="todo-list"></ul>
+    <header id="header"><h3>To Do List</h3></header>
+    <section>
+        <main>
+            <div class="clock-container">
+                <div id="weather"></div>
+                <div id="clock"></div>
+            </div>
+            <!-- <div class="weather-container">
+            </div> -->
+            <div class="rand-images-container">
+                <div id="rand-image"></div>
+                <div id="quotes"></div>
+            </div>
+        </main>
+        <aside>
+            <form id="todo-form">
+                <input type="text" placeholder="할 일을 입력해 주세요" />
+            </form>
+            <!--투두 리스트 나열하는 부분-->
+            <!--자바스크립트에서 li 생성-->
+            <ul id="todo-list"></ul>
+        </aside>
+    </section>
 
     <script src="./1214.js"></script>
+    <script src="./clock.js"></script>
+    <script src="./image.js"></script>
+    <script src="./quotes.js"></script>
+    <script src="./weather.js"></script>
+    <script src="./order.js"></script>
 </body>
+
 </html>

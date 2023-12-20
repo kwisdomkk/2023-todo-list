@@ -1,0 +1,86 @@
+
+        section{display: flex;}
+        
+        form{
+            width: 500px;
+            /* margin: 0 auto; */
+            padding: 40px;
+            position: relative;
+        }
+        input{
+            width: 100%;
+            padding: 10px 10px;
+            position: absolute;
+        }
+        ul{gap: 10px; width: 500px;
+            margin: 0 auto;
+            padding: 8px;
+        }
+        li{ list-style: none;
+            padding: 8px;
+            font-size:small;font-weight: bold;
+        }
+        button{
+            margin: 0 10px;
+        }
+        #header{text-align: center;font-size: 50px;margin-top: 50px;background-color:#FFD9FA}
+        body{background-color:#FFEBFF;}
+        .clock-container{
+            width: 950px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+        }
+        #clock {font-size: 50px;
+                    font-weight: 700;            
+        }
+
+        .rand-images-container{
+            width: 900px;
+            height: 500px;
+            position: fixed;
+            /* margin-left: 30px; */
+            left: 100px;
+        }
+        /* .rand-images-container #rand-image {
+            width: 100%;
+            height: 100%;
+        }  */
+
+
+         .rand-images-container #rand-image::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            /* background-color: red; */
+
+        }  
+        .rand-images-container #rand-image img{
+            width: 800px;
+            height: 500px;
+            object-fit: cover;
+    
+        }
+     
+        #quotes{
+            position: absolute;
+            top:50%;
+            left: 45%; 
+            transform: translate(-50%,-50%);
+            font-weight: 600;
+            font-size: 40px;
+            color: white;
+        }
+        #weather{ margin-top: 30px;
+            
+        }
+        .dragging{
+            opacity: 0.1;
+        }
+
+
+    
